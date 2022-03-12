@@ -24,6 +24,9 @@
  * Copyright 2012-2013 Mattia Larentis
  * http://www.apache.org/licenses/LICENSE-2.0
  */
+
+
+
 .bootstrap-switch {
   display: inline-block;
   direction: ltr;
@@ -2005,6 +2008,16 @@ textarea.form-control {
 
 .radio.radio-inline {
   margin-top: 0; }
+
+.justifying-text {
+  text-align: justify;
+  text-justify: inter-word;
+  }
+
+.skills-list {
+ color: #9A9A9A;
+ font-size: 15px;
+ text-transform: capitalize;}
 
 .progress-container {
   position: relative; }
