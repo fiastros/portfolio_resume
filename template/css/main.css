@@ -2019,6 +2019,11 @@ textarea.form-control {
  font-size: 15px;
  text-transform: capitalize;}
 
+ .education-small {
+ color: #ffffff;
+ font-size: 15px;
+ text-transform: capitalize;}
+
 .progress-container {
   position: relative; }
   .progress-container + .progress-container,
