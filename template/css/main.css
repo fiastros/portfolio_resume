@@ -2514,7 +2514,7 @@ body {
     top: -4px; }
   .navbar .navbar-nav .nav-link.btn {
     padding: 11px 22px; }
-    .navbar .navbar-nav .nav-link.btn.btn-lg {
+    .navbar .navbar-nav .nav-link.btn.btn-lgcc-facebook  {
       padding: 15px 48px; }
     .navbar .navbar-nav .nav-link.btn.btn-sm {
       padding: 5px 15px; }
@@ -5267,6 +5267,9 @@ Created using IcoMoon - icomoon.io
 
 .cc-twitter:hover i {
   color: #1da1f2; }
+
+.cc-github:hover i {
+  color: #0a0c0d; }
 
 .cc-google-plus:hover i {
   color: #dd4b39; }
