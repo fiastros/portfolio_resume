@@ -1493,6 +1493,8 @@
     color: #40a249; }
     .btn-neutral:hover:not(.nav-link), .btn-neutral:focus:not(.nav-link) {
       box-shadow: none; }
+    .btn-neutral:hover:not(.nav-second), .btn-neutral:focus:not(.nav-second) {
+      box-shadow: none; }
   .btn-neutral.btn-simple {
     color: #FFFFFF;
     border-color: #FFFFFF; }
@@ -2348,10 +2350,10 @@ body {
   background: #FFFFFF; }
 
 /* Animations */
-.nav-pills .nav-link,
-.nav-item .nav-link,
+.nav-pills .nav-link .nav-second,
+.nav-item .nav-link .nav-second,
 .navbar,
-.nav-tabs .nav-link {
+.nav-tabs .nav-link .nav-second {
   transition: all 300ms ease 0s; }
 
 .dropdown-toggle:after,
@@ -2398,6 +2400,19 @@ body {
   margin-right: 19px;
   background-color: rgba(222, 222, 222, 0.3);
   border-radius: 30px; }
+
+.nav-second {
+  text-align: center;
+  color: #9A9A9A;
+  margin-right: 19px;
+  background-color: rgba(222, 222, 222, 0.3);
+  border-radius: 0.1875rem;
+  border-width: 2px;
+  padding: 11px 22px;
+  cursor: pointer;
+
+  }
+
   .nav-pills .nav-item .nav-link:hover {
     background-color: rgba(222, 222, 222, 0.3); }
   .nav-pills .nav-item .nav-link.active, .nav-pills .nav-item .nav-link.active:focus, .nav-pills .nav-item .nav-link.active:hover {
