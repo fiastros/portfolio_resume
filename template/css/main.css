@@ -2397,8 +2397,8 @@ body {
 .nav-pills .nav-item .nav-link {
   padding: 0 15.5px;
   text-align: center;
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
   font-weight: 400;
   color: #9A9A9A;
   margin-right: 19px;
@@ -5035,7 +5035,8 @@ Created using IcoMoon - icomoon.io
 .gallery .cc-porfolio-image figure {
   position: relative;
   overflow: hidden;
-  text-align: center; }
+  text-align: center;
+  }
 
 .gallery .cc-porfolio-image figure img {
   position: relative;
@@ -5066,7 +5067,7 @@ Created using IcoMoon - icomoon.io
 
 .gallery .cc-porfolio-image figure .h4,
 .gallery .cc-porfolio-image figure p {
-  margin: 0; }
+  margin: 0;}
 
 .gallery figure.cc-effect figcaption::before,
 .gallery figure.cc-effect figcaption::after {
