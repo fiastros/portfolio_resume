@@ -5041,8 +5041,8 @@ Created using IcoMoon - icomoon.io
 .gallery .cc-porfolio-image figure img {
   position: relative;
   display: block;
-  max-width: 100%;
-  opacity: 1; }
+  width: 100%;
+  opacity: 1;}
 
 .gallery .cc-porfolio-image figure figcaption {
   position: absolute;
@@ -5092,7 +5092,7 @@ Created using IcoMoon - icomoon.io
   transform-origin: 100% 0; }
 
 .gallery figure.cc-effect .h4 {
-  margin-top: 25%;
+  margin-top: 5%;
   transition: transform 0.35s;
   opacity: 0; }
   @media (max-width: 480px) {
