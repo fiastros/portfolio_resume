@@ -3,6 +3,7 @@
 
 #Ignoring all the ds-store in all the sub-directory
 **/.DS_Store
+**/.Rhistory
 
 #ignoring directories
 venv/
