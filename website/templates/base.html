@@ -52,7 +52,7 @@
               <div class="page-header-image" data-parallax="true" style="background-image: url('static/images/background/background_image.jpeg')"></div>
               <div class="container">
                 <div class="content-center">
-                  <div class="cc-profile-image"><a href="#"><img src="static/images/background/profile_picture.jpeg" alt="Image"/></a></div>
+                  <div class="cc-profile-image"><a href="#do-nothing"><img src="static/images/background/profile_picture.jpeg" alt="Image"/></a></div>
 
                   {% with messages = get_flashed_messages() %}
                     {% if messages %}
@@ -94,41 +94,11 @@
           <div class="container">
             <div class="card" data-aos="fade-up" data-aos-offset="10">
               <div class="row">
-                {%block about%} {%endblock%}
 
-                <div class="col-lg-6 col-md-12">
-                  <div class="card-body">
-                    <div class="h4 mt-0 title">Basic Information</div>
-                    <div class="row">
-                      <div class="col-sm-4"><strong class="text-uppercase">Age:</strong></div>
-                      <div class="col-sm-8">24</div>
-                    </div>
-                    <div class="row mt-3">
-                      <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
-                      <div class="col-sm-8">loicyng@gmail.com</div>
-                    </div>
-                    <div class="row mt-3">
-                      <div class="col-sm-4"><strong class="text-uppercase">Phone:</strong></div>
-                      <div class="col-sm-8">+33 7 49 65 06 69</div>
-                    </div>
-                    <div class="row mt-3">
-                      <div class="col-sm-4"><strong class="text-uppercase">Address:</strong></div>
-                      <div class="col-sm-8">Villejean, Rennes, France</div>
-                    </div>
-                    <div class="row mt-3">
-                      <div class="col-sm-4"><strong class="text-uppercase">Language:</strong></div>
-                      <div class="col-sm-8">French (Fluent), English (Toeïc: 930/990), Spanish(Beginner)</div>
-                    </div>
+                {% block about_text %} {% endblock %}
 
-                    <div class="row mt-3">
-                      <div class="col-sm-4"><strong class="text-uppercase">Leisure:</strong></div>
-                      <div class="col-sm-8">
-                        Swimming, <i class="fa fa-youtube-play"> Animes </i>, <i class="fa fa-code"> Coding </i> , <i class="fa fa-music"> Music </i>
-                        ,<i class="fa fa-book"> Reading </i>, <i class="fa fa-gamepad"> games </i> <i class="fa fa-plane"> Travelling </i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                {% block about_basic_information %} {% endblock %}
+
               </div>
             </div>
           </div>
@@ -228,13 +198,13 @@
 
             <div class="tab-content gallery mt-5">
 
-              {% block company_projects %} {% endblock %}
+              {% include "projects/company_projects.html" %}
 
-              {% block personal_projects %} {% endblock %}
+              {% include "projects/personal_projects.html" %}
 
-              {% block freelancing_projects %} {% endblock %}
+              {% include "projects/freelancing_projects.html" %}
 
-              {% block school_projects %} {% endblock %}
+              {% include "projects/school_projects.html" %}
             </div>
           </div>
         </div>
@@ -255,15 +225,13 @@
               </div>
             </div> <br>
 
-
             <div class="tab-content gallery mt-5">
-              {% block current_work %} {% endblock %}
+              {% include "experiences/current_work.html" %}
 
-              {% block company_work %} {% endblock %}
+              {% include "experiences/company_work.html" %}
 
-              {% block internship_work %} {% endblock %}
+              {% include "experiences/internship_work.html" %}
             </div>
-
           </div>
         </div>
 
@@ -283,9 +251,9 @@
               </div> <br>
 
             <div class="tab-content gallery mt-5">
-              {% block recent_schools %} {% endblock %}
+              {% include "education/recent_schools.html" %}
 
-              {% block second_recent_schools %} {% endblock %}
+              {% include "education/second_recent_schools.html" %}
             </div>
           </div>
         </div>
@@ -304,13 +272,13 @@
 
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    {% block first_reference %} {% endblock %}
+                    {% include "references/first_reference.html" %}
                   </div>
                   <div class="carousel-item">
-                    {% block second_reference %} {% endblock %}
+                    {% include "references/second_reference.html" %}
                   </div>
                   <div class="carousel-item">
-                    {% block third_reference %} {% endblock %}
+                    {% include "references/third_reference.html" %}
                   </div>
                 </div>
               </div>
