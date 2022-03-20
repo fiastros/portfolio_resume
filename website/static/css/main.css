@@ -25,6 +25,34 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  */
 
+.flashing_message {
+ color: red;
+ border:1px solid grey;
+ background-color: white;
+}
+
+#containing {
+    overflow:hidden;
+    position:relative;
+    height:100%;
+    width:50%;
+    margin:0;
+    padding:0;
+    }
+#hideMe {
+    -webkit-animation: cssAnimation 5s forwards;
+    animation: cssAnimation 5s forwards;
+}
+@keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+@-webkit-keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}
 
 
 .bootstrap-switch {

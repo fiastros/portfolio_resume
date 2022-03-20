@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>EYANGO TABI</title>
+    <link rel="shortcut icon" href="static/images/background/favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
 
@@ -52,6 +53,19 @@
               <div class="container">
                 <div class="content-center">
                   <div class="cc-profile-image"><a href="#"><img src="static/images/background/profile_picture.jpeg" alt="Image"/></a></div>
+
+                  {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                      {% for msg in messages %}
+                          <div id="containing" >
+                            <div id="hideMe" class="flashing_message">
+                              {{ msg }}
+                            </div>
+                          </div>
+                      {% endfor %}
+                    {% endif %}
+                  {% endwith %}
+
                   <div class="h2 title">EYANGO TABI Théophile Ghislain Loïc</div>
                   <p class="category text-white">Researcher PhD Student, Data scientist, Agronomist</p>
                   <a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">
@@ -1077,7 +1091,7 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="card-body">
-                            <form action="https://formspree.io/f/xoqrljjr" method="POST">
+                            <form action="/sendemail/" method="POST">
                               <div class="p pb-3"><strong>Feel free to contact me </strong></div>
                               <div class="row mb-3">
                                 <div class="col">
