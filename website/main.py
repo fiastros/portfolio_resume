@@ -1,21 +1,25 @@
-from flask import Flask, render_template, request, redirect, flash
+from flask import render_template, request, redirect, flash, Blueprint
 import smtplib
 from email.message import EmailMessage
 import json
+import os
 
-with open("confidential.json") as f:
+main = Blueprint("main", __name__)
+
+# retrieve your gmail personal information
+with open("website/confidential.json") as f:
     confidential_info = json.load(f)
 
-app = Flask(__name__)
-app.config['SECRET_KEY'] = "secret_key"
+#print(confidential_info.get("your_email"))
 
-@app.route("/")
+@main.route("/")
 def home():
     return render_template("index.html")
 
-@app.route("/sendemail/", methods=["POST"])
+@main.route("/sendemail/", methods=["POST"])
 def sendemail():
     if request.method == "POST":
+
         #retrieving the information typed in the form by the user
         sender_name = request.form["name"]
         sender_subject = request.form["Subject"]
@@ -46,29 +50,10 @@ def sendemail():
 
         #Send the mail
         try:
-            flash("Message. Expect an answer under 48 hour. Thank you !")
+            flash("Message sent ! Expect an answer under 48 hour. Thank you !")
             server.send_message(msg)
         except:
             flash(f"There has been an issue sending your mail. Please contact : {receiver_email}")
             redirect("/")
 
     return redirect("/")
-
-if __name__ == "__main__":
-    app.run(threaded=True, debug=True, host = "127.0.0.1", port=5000)
-
-
-"""
-#this part of the code was to update automatically my age on the website
-from datetime import datetime
-
-def days_between(d1,d2):
-    d1 = datetime.strptime(d1, "%Y-%m-%d")
-    d2 = datetime.strptime(d2, "%Y-%m-%d")
-    return abs((d2-d1).days)
-
-date_today = str( datetime.date(datetime.now()) )
-
-my_age = int( days_between("1997-09-08", date_today)/365.25 )
-print(my_age)
-"""
