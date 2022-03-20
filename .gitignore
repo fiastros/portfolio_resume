@@ -1,5 +1,5 @@
-#ignoring miscellanaous files
-.idea/
+#ignoring files
+/website/confidential.json
 
 #Ignoring all the ds-store in all the sub-directory
 **/.DS_Store
@@ -7,3 +7,6 @@
 
 #ignoring directories
 venv/
+
+#ignoring miscellanaous files or directories
+.idea/
