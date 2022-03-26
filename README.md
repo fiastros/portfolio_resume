@@ -49,7 +49,7 @@ from a terminal (Linux/Mac) type: replce "pip" with what you have on your comput
 (pip or pip3)
 
 ```bash
-python3 main.py  ou python main.py
+python3 run.py  ou python run.py
 ```
 </li>
 </ol>

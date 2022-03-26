@@ -2,7 +2,6 @@ from flask import render_template, request, redirect, flash, Blueprint
 import smtplib
 from email.message import EmailMessage
 import json
-import os
 
 main = Blueprint("main", __name__)
 
