@@ -1,5 +1,13 @@
 # Portfolio Webapp Install and Launch
 
+The backend of the project is entirely python, 
+The frontend is a mix of: HTML, CSS, Javascript, Bootstrap
+The hosting server: nginx & gunicorn both running on my personal Raspberry pi
+
+## Visit online running site
+
+To visit the online running site please go here <a href="https://loiceyango.com/">loiceyango.com</a>
+
 ## Setup & installation
 
 Be sure that you have at least python3 ( I'm running on python 3.9.2) installed on your system.
@@ -61,12 +69,3 @@ Once the server is running localy, you can access it :
 - Enter the following url : http://127.0.0.1:5000
 
 For any question, feel free to make a request in the ISSUE section.
-
-## Ongoing work and further improvements
-
-Currently (at the time of writing ): 
-- I'm making the back-end of the website 
-using 100% Python. 
-- Next step will be to host this website on my raspberry pi so that 
-Anyone could access it online from anywhere. 
-
