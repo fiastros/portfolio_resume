@@ -6,8 +6,14 @@ import json
 main = Blueprint("main", __name__)
 
 # retrieve your gmail personal information
-with open("website/confidential.json") as f:
-    confidential_info = json.load(f)
+with open("website/confidential.json") as confidential_file:
+    confidential_info = json.load(confidential_file)
+
+class config:
+    receiver_name = confidential_info.get("your_name")
+    receiver_email = confidential_info.get("your_email")
+    receiver_password = confidential_info.get("your_password")
+
 
 #print(confidential_info.get("your_email"))
 
@@ -26,9 +32,9 @@ def sendemail():
         sender_message = request.form["message"]
 
         #retrieving our personnal information from the confindential.json file
-        receiver_name = confidential_info.get("your_name")
-        receiver_email = confidential_info.get("your_email")
-        receiver_password = confidential_info.get("your_password")
+        receiver_name = config.receiver_name
+        receiver_email = config.receiver_email
+        receiver_password = config.receiver_password
 
         #loggin in to our email account
         server = smtplib.SMTP("smtp.gmail.com", 587)
